@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colmar Academy</title>
+    <title>25-Koh-Colmar</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -31,5 +31,83 @@
         <img src="images/ic-login.svg" alt="login" />
       </nav>
     </header>
+
+    <!-- ===== HERO =====
+         - .hero-img (60%) : รูปหลักด้านซ้าย
+         - .hero-text (40%) : หัวข้อ, คำบรรยาย, ปุ่ม Start here
+         - บน mobile : stack แนวตั้ง รูปอยู่บน text อยู่ล่าง
+    -->
+    <section class="hero">
+      <div class="hero-img">
+        <img src="images/banner.jpg" alt="Students studying" />
+      </div>
+      <div class="hero-text">
+        <h1>Learn something new everyday</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#" class="btn">Start here</a>
+      </div>
+    </section>
+
+    <!-- ===== INFO =====
+         - .info-left (60%) : รูปใหญ่ + quote (ซ่อนบน mobile)
+         - .info-right (40%) : รายการข่าว 3 รายการ
+           - .news-item : แต่ละรายการ (รูปซ้าย + เนื้อหาขวา)
+           - บน mobile : stack แนวตั้ง รูปเต็มความกว้าง
+    -->
+    <section class="info">
+      <div class="info-left">
+        <img src="images/information-main.jpg" alt="Student" />
+        <div class="info-left-text">
+          <h2>It doesn't hurt to keep practicing</h2>
+          <blockquote>
+            "Curabitur vitae libero in ipsum porttitor consequat. Aliquam et
+            commodo lectus, nec consequat neque. Sed non accumsan urna.
+            Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur
+            dolor consequat, tristique ligula."
+          </blockquote>
+          <cite>Emanuel, Sr Strategist at Hiring.com</cite>
+        </div>
+      </div>
+
+      <div class="info-right">
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="images/information-orientation.jpg" alt="Orientation" />
+          </div>
+          <div class="news-item-body">
+            <h3>Orientation date</h3>
+            <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-item-img">
+            <img src="images/information-campus.jpg" alt="Campus" />
+          </div>
+          <div class="news-item-body">
+            <h3>Our campus</h3>
+            <p>Find which campus is close by you</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <div class="news-item-img">
+            <img
+              src="images/information-guest-lecture.jpg"
+              alt="Guest lecture"
+            />
+          </div>
+          <div class="news-item-body">
+            <h3>Our guest lecture</h3>
+            <p>
+              Join a keynote with Oliver Sack about music in medical treatment
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

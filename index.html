@@ -3,9 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>25-Koh-Colmar</title>
+    <title>Colmar Academy</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>25-Koh-Colmar</h1>
+    <!-- ===== HEADER / NAVBAR =====
+         - .logo : โลโก้ + ชื่อ (ซ่อนชื่อบน mobile)
+         - .nav-desktop : เมนูข้อความ (ซ่อนบน mobile)
+         - .nav-mobile : เมนูไอคอน (แสดงบน mobile เท่านั้น)
+    -->
+    <header>
+      <div class="logo">
+        <img src="images/ic-logo.svg" alt="Colmar Academy" />
+        <div><strong>COLMAR</strong><span>ACADEMY</span></div>
+      </div>
+
+      <nav class="nav-desktop">
+        <a href="#">On campus</a>
+        <a href="#">Online</a>
+        <a href="#">For companies</a>
+        <a href="#">Sign in</a>
+      </nav>
+
+      <nav class="nav-mobile">
+        <img src="images/ic-on-campus.svg" alt="campus" />
+        <img src="images/ic-online.svg" alt="online" />
+        <img src="images/ic-login.svg" alt="login" />
+      </nav>
+    </header>
   </body>
 </html>

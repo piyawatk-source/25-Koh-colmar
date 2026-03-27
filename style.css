@@ -1,0 +1,108 @@
+/* ==============================================
+   RESET & VARIABLES
+   - ล้างค่า margin/padding ทั้งหมด
+   - กำหนดสีที่ใช้ซ้ำในตัวแปร CSS
+============================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #ffffff;
+  --bg: #f8f8f8; /* พื้นหลังหลัก */
+  --dark: #2b2b2b; /* ข้อความเข้ม / ปุ่ม */
+  --gray: #6b6b6b; /* ข้อความรอง */
+  --light-gray: #d8d8d8; /* เส้นขอบ */
+  --card-bg: #e8e8e8; /* พื้นหลัง card / กรอบวีดีโอ */
+  --blue: #2f76bf; /* ลิงก์ / Read more */
+}
+
+/* ==============================================
+   BASE STYLES
+   - รูปภาพทั้งหมดขยายเต็มความกว้าง
+   - ลิงก์ไม่มีขีดเส้นใต้ สีฟ้า
+============================================== */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+/* ==============================================
+   HEADER / NAVBAR
+   - sticky อยู่ด้านบนเสมอ สูง 64px
+   - logo อยู่ซ้าย, nav อยู่ขวา
+   - .nav-mobile ซ่อนบน desktop
+============================================== */
+header {
+  background: var(--white);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  color: var(--dark);
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo span {
+  color: var(--gray);
+  font-weight: 400;
+}
+
+/* เมนูข้อความ - แสดงบน desktop */
+.nav-desktop {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-desktop a {
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.nav-desktop a:hover {
+  color: var(--blue);
+}
+
+/* เมนูไอคอน - ซ่อนบน desktop แสดงบน mobile */
+.nav-mobile {
+  display: none;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-mobile img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

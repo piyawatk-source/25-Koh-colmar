@@ -265,3 +265,182 @@ header {
   font-size: 14px;
   color: var(--blue);
 }
+
+/* ==============================================
+   COURSES SECTION
+   - grid 3 คอลัมน์
+   - แต่ละ card : รูป + ชื่อ + label + คำอธิบาย
+============================================== */
+.courses {
+  background: var(--bg);
+  padding: 32px 72px;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: left;
+}
+
+.course-card {
+  background: var(--white);
+}
+
+.course-card img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-card-body {
+  padding: 16px;
+}
+
+.course-card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* label "COURSES" สีเทา ตัวพิมพ์เล็ก */
+.course-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gray);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.course-card-body p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+/* ==============================================
+   THESIS SECTION
+   - .thesis-left 60% : กรอบวีดีโอ + ชื่อ + คำบรรยาย
+   - .thesis-right 40% : หัวข้อ + thesis cards
+   - วีดีโอใช้ position absolute เพื่อเต็มกรอบ
+============================================== */
+.thesis {
+  display: flex;
+  background: var(--white);
+  padding: 32px 72px;
+  gap: 24px;
+}
+
+.thesis-left {
+  width: 60%;
+  flex-shrink: 0;
+}
+
+/* กรอบวีดีโอ aspect-ratio 16:9 */
+.thesis-video {
+  background: var(--card-bg);
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+/* วีดีโอขยายเต็มกรอบ */
+.thesis-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.thesis-video-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.thesis-video-desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ฝั่งขวา - รายการ thesis */
+.thesis-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.thesis-right h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+/* แต่ละ thesis card : รูปซ้าย + เนื้อหาขวา */
+.thesis-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.thesis-card img {
+  width: 35%;
+  flex-shrink: 0;
+  height: 120px;
+  object-fit: cover;
+}
+
+.thesis-card-body h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.thesis-card-body p {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* ==============================================
+   FOOTER
+   - copyright ซ้าย, links ขวา
+============================================== */
+footer {
+  background: var(--white);
+  border-top: 1px solid var(--light-gray);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.footer-links a:hover {
+  color: var(--dark);
+}

@@ -444,3 +444,158 @@ footer p {
 .footer-links a:hover {
   color: var(--dark);
 }
+
+/* ==============================================
+   MOBILE RESPONSIVE (max-width: 768px)
+   สิ่งที่เปลี่ยนบน mobile:
+   - Header : ซ่อนชื่อโลโก้ + nav desktop → แสดง nav icon
+   - Hero : stack แนวตั้ง
+   - Info : ซ่อนฝั่งซ้าย, news-item stack แนวตั้ง
+   - Courses : 1 คอลัมน์, ซ่อนรูป/label/คำอธิบาย
+   - Thesis : ซ่อน thesis-right และ title/desc ใต้วีดีโอ
+   - Footer : stack แนวตั้ง, ซ่อน links
+============================================== */
+@media (max-width: 768px) {
+  /* --- HEADER --- */
+  header {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+
+  /* ซ่อนชื่อ COLMAR ACADEMY เหลือแค่ไอคอน */
+  .logo div {
+    display: none;
+    justify-content: none;
+  }
+
+  /* ซ่อนเมนูข้อความ */
+  .nav-desktop {
+    display: none;
+  }
+
+  /* แสดงเมนูไอคอน */
+  .nav-mobile {
+    display: flex;
+    gap: 32px;
+  }
+
+  .logo div {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  /* --- HERO --- */
+  /* stack แนวตั้ง รูปบน ข้อความล่าง */
+  .hero {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-img img {
+    min-height: auto;
+  }
+
+  .hero-text {
+    padding: 32px 16px;
+    gap: 32px;
+  }
+
+  /* --- INFO --- */
+  /* ซ่อนฝั่งซ้าย (รูปใหญ่ + quote) */
+  .info-left {
+    display: none;
+  }
+
+  /* news-item เต็มความกว้าง */
+  .info-right {
+    width: 100%;
+    border-left: none;
+  }
+
+  /* stack แนวตั้ง รูปบน ข้อความล่าง */
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-item-img {
+    width: 100%;
+  }
+
+  .news-item-img img {
+    height: 200px;
+  }
+
+  .news-item-body {
+    padding: 16px;
+  }
+
+  /* --- COURSES --- */
+  .courses {
+    padding: 32px 16px;
+  }
+
+  /* 1 คอลัมน์ */
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  /* พื้นหลังเทา ซ่อนรูป */
+  .course-card {
+    background: var(--card-bg);
+  }
+
+  .course-card img {
+    display: none;
+  }
+
+  /* ซ่อน label และคำอธิบาย เหลือแค่ชื่อ */
+  .course-label,
+  .course-card-body p {
+    display: none;
+  }
+
+  /* --- THESIS --- */
+  /* stack แนวตั้ง วีดีโอเต็มความกว้าง */
+  .thesis {
+    flex-direction: column;
+    padding: 32px 0 0 0;
+    gap: 0;
+  }
+
+  .thesis-left {
+    width: 100%;
+  }
+
+  /* ซ่อน title และ desc ใต้วีดีโอ */
+  .thesis-video-title,
+  .thesis-video-desc {
+    display: none;
+  }
+
+  /* ซ่อน thesis cards ฝั่งขวาทั้งหมด */
+  .thesis-right {
+    display: none;
+  }
+
+  /* --- FOOTER --- */
+  /* stack แนวตั้ง กึ่งกลาง */
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  /* ซ่อน Terms / Privacy */
+  .footer-links {
+    display: none;
+  }
+}
